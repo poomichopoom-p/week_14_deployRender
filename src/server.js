@@ -3,11 +3,12 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import helmet from "helmet";
 
-import  limiter  from "./middlewares/rateLimiter.js";
+import { limiter } from "./middlewares/rateLimiter.js";
 import { users } from "./fakeData/fakeUsers.js";
 import { router as apiRoutes } from "./routes/index.js";
 import { connectDB } from "./config/mongodb.js";
 import { connectSupabase } from "./config/supabase.js";
+
 
 const app = express();
 
@@ -21,7 +22,7 @@ const corsOptions = {
 };
 
 app.use(helmet());
-app.use(limiter());
+app.use(limiter);
 
 app.use(cors(corsOptions));
 
