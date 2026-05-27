@@ -80,7 +80,7 @@ app.use((err, req, res, next) => {
 
 await connectDB();
 await connectSupabase();
-
+const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => {
   console.log(`Server running on PORT: ${PORT} 🟢`);
 });
