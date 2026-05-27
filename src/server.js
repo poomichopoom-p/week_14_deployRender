@@ -13,7 +13,7 @@ const app = express();
 
 const corsOptions = {
   origin: [
-    "https://full-stackapp-frontend.vercel.app/",
+    "https://full-stackapp-frontend.vercel.app",
     "http://localhost:5173",
     "http://localhost:5174",
     "http://localhost:5175",
